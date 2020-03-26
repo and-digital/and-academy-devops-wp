@@ -106,6 +106,7 @@ RUN set -ex; \
 	chown -R www-data:www-data /usr/src/wordpress
 
 COPY docker-entrypoint.sh /usr/local/bin/
+#COPY my-theme /usr/sr/wordpress/wp-content/my-theme
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
